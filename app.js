@@ -24,7 +24,18 @@ app.get('/About', function (req, res) {
     console.log('Request was made: ' + req.url);
     var v = 1;
     let data ={
-        v: "initial"
+        v: v
+    }
+    res.render('home', {data: data});
+});
+
+app.get('/Help', function (req, res) {
+
+    //res.render('home');
+    console.log('Request was made: ' + req.url);
+    var v = 2;
+    let data ={
+        v: v
     }
     res.render('home', {data: data});
 });
