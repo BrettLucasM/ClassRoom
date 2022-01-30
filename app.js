@@ -42,7 +42,7 @@ app.get('/Help', function (req, res) {
 
 
 
-app.listen(8085, function(){
+app.listen(8080, '0.0.0.0', function(){
 
     console.log("Listening to Port 8085")
     console.log("Running...")
