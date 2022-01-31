@@ -53,9 +53,17 @@ app.get('/Help', function (req, res) {
 
 app.post('/creation', urlencodedParser, function (req, res){
     var Answer = req.body;
-    
-    res.send(Answer);
-
+    var clear = 'clear';
+    var i = 2;
+   // res.send(Answer);
+if (Answer === '7'){
+    i = 0;
+}
+    let data ={
+        i: i,
+        Answer: Answer
+    }
+    res.render('Create', {data: data});
    
 });
 
