@@ -29,6 +29,17 @@ app.get('/About', function (req, res) {
     res.render('home', {data: data});
 });
 
+app.get('/create', function (req, res) {
+
+    //res.render('home');
+    console.log('Request was made: ' + req.url);
+    var v = 1;
+    let data ={
+        v: v
+    }
+    res.render('Create', {data: data});
+});
+
 app.get('/Help', function (req, res) {
 
     //res.render('home');
@@ -40,7 +51,13 @@ app.get('/Help', function (req, res) {
     res.render('home', {data: data});
 });
 
+app.post('/creation', urlencodedParser, function (req, res){
+    var Answer = req.body;
+    
+    res.send(Answer);
 
+   
+});
 
 app.listen(8080, '0.0.0.0', function(){
 
